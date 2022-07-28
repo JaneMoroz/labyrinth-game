@@ -2,6 +2,7 @@ import React from "react";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { startGame } from "../features/game/gameSlice";
+import dog from "../assets/dog-big.svg";
 
 const Instructions = () => {
   const dispatch = useDispatch();
@@ -44,6 +45,7 @@ const Instructions = () => {
           понятно
         </button>
       </div>
+      <img className="image" src={dog} alt="Пёса" />
     </div>
   );
 };

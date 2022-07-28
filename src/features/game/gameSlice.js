@@ -32,7 +32,6 @@ const gameSlice = createSlice({
         tempDirections,
         state.boardSize
       );
-      console.log(state.answer);
       state.isGameOver = false;
       state.isModalOpen = false;
       state.inGameMode = true;
