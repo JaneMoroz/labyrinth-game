@@ -1,5 +1,5 @@
 import Instructions from "./components/Instructions";
-import Game from "./components/Game";
+import Game from "./components/Game/Game";
 import { useSelector } from "react-redux";
 
 function App() {

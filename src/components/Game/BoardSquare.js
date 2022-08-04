@@ -1,14 +1,21 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { checkAnswer } from "../features/game/gameSlice";
-import { openModal } from "../features/game/gameSlice";
+import { checkAnswer } from "../../features/game/gameSlice";
+import { openModal } from "../../features/game/gameSlice";
 import { FaThumbsUp, FaThumbsDown } from "react-icons/fa";
-import dog from "../assets/dog-small.svg";
+import dog from "../../assets/dog-small.svg";
 
 const BoardSquare = ({ index }) => {
   const dispatch = useDispatch();
-  const { initialPosition, isGameOver, answer, isWinner, userAnswer } =
-    useSelector((store) => store.game);
+  const {
+    initialPosition,
+    isGameOver,
+    answer,
+    isWinner,
+    userAnswer,
+    directionDelay,
+    numOfSteps,
+  } = useSelector((store) => store.game);
 
   const handleClick = (index) => {
     dispatch(checkAnswer(index));
@@ -23,10 +30,10 @@ const BoardSquare = ({ index }) => {
       <button
         onClick={() => handleClick(index)}
         className="square"
-        disabled={isGameOver}
+        disabled={isGameOver || directionDelay < numOfSteps - 1}
       >
         <span>Старт</span>
-        <img src={dog} alt="пёса" />
+        <img className="square__img" src={dog} alt="пёса" />
       </button>
     );
   }
@@ -39,10 +46,10 @@ const BoardSquare = ({ index }) => {
         <button
           onClick={() => handleClick(index)}
           className="square"
-          disabled={isGameOver}
+          disabled={isGameOver || directionDelay < numOfSteps - 1}
         >
           {!isWinner && <span>Финиш</span>}
-          {!isWinner && <img src={dog} alt="пёса" />}
+          {!isWinner && <img className="square__img" src={dog} alt="пёса" />}
           {isWinner && <FaThumbsUp className="icon icon-success" />}
         </button>
       );
@@ -54,7 +61,7 @@ const BoardSquare = ({ index }) => {
         <button
           onClick={() => handleClick(index)}
           className="square"
-          disabled={isGameOver}
+          disabled={isGameOver || directionDelay < numOfSteps - 1}
         >
           <FaThumbsDown className="icon icon-fail" />
         </button>
@@ -68,7 +75,7 @@ const BoardSquare = ({ index }) => {
       onClick={() => handleClick(index)}
       key={index}
       className="square"
-      disabled={isGameOver}
+      disabled={isGameOver || directionDelay < numOfSteps - 1}
     ></button>
   );
 };

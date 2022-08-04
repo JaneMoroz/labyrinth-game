@@ -158,17 +158,19 @@ Game
 
 .grid-3 {
   grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(60px, 1fr);
+  /* grid-auto-rows: 1fr; */
 }
 
 .grid-4 {
   grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(60px, 1fr);
 }
 
 .grid-5 {
   grid-template-columns: repeat(5, 1fr);
-  grid-auto-rows: 1fr;
+  grid-auto-rows: minmax(60px, 1fr);
+  /* grid-auto-rows: 1fr; */
 }
 
 .letters {
@@ -207,6 +209,10 @@ Game
   color: var(--color-accent-secondary);
 }
 
+.square__img {
+  height: 40px;
+}
+
 .icon {
   position: absolute;
   top: 0;
@@ -226,6 +232,7 @@ Game
   row-gap: 1.6rem;
   column-gap: 1.8rem;
   padding: 1.6rem;
+  min-height: 14rem;
 }
 
 .direction {
