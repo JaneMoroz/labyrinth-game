@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/labyrinth-game/static/css/main.0f9b24a4.css",
-    "main.js": "/labyrinth-game/static/js/main.c46c6936.js",
+    "main.css": "/labyrinth-game/static/css/main.55b7ae82.css",
+    "main.js": "/labyrinth-game/static/js/main.5eee81c4.js",
     "static/js/787.195af958.chunk.js": "/labyrinth-game/static/js/787.195af958.chunk.js",
     "static/media/dog-small.svg": "/labyrinth-game/static/media/dog-small.10675b126f5c2ca505c67dd9f0f00270.svg",
     "static/media/dog-big.svg": "/labyrinth-game/static/media/dog-big.0f299501d03a3ccdaa425e865743ee0d.svg",
     "index.html": "/labyrinth-game/index.html",
-    "main.0f9b24a4.css.map": "/labyrinth-game/static/css/main.0f9b24a4.css.map",
-    "main.c46c6936.js.map": "/labyrinth-game/static/js/main.c46c6936.js.map",
+    "main.55b7ae82.css.map": "/labyrinth-game/static/css/main.55b7ae82.css.map",
+    "main.5eee81c4.js.map": "/labyrinth-game/static/js/main.5eee81c4.js.map",
     "787.195af958.chunk.js.map": "/labyrinth-game/static/js/787.195af958.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0f9b24a4.css",
-    "static/js/main.c46c6936.js"
+    "static/css/main.55b7ae82.css",
+    "static/js/main.5eee81c4.js"
   ]
 }
